@@ -72,5 +72,31 @@ namespace Coffe_Management
         {
             Load_Data_Form_Sql();
         }
+
+        private void FillComboBox()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT Name FROM Menu";
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        cb_box_Menu.Items.Clear();
+                        while (reader.Read())
+                        {
+                            cb_box_Menu.Items.Add(reader["Name"].ToString());
+                        }
+                    }
+                }
+            }
+        }
+
+        private void cb_box_Menu_Click(object sender, EventArgs e)
+        {
+            FillComboBox();
+        }
     }
 }

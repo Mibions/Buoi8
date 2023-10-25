@@ -40,6 +40,8 @@ namespace Coffe_Management
             this.Delete = new System.Windows.Forms.Button();
             this.tb_Find = new System.Windows.Forms.TextBox();
             this.btn_Refresh = new System.Windows.Forms.Button();
+            this.cb_box_Menu = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,11 +139,31 @@ namespace Coffe_Management
             this.btn_Refresh.UseVisualStyleBackColor = true;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
+            // cb_box_Menu
+            // 
+            this.cb_box_Menu.FormattingEnabled = true;
+            this.cb_box_Menu.Location = new System.Drawing.Point(551, 241);
+            this.cb_box_Menu.Name = "cb_box_Menu";
+            this.cb_box_Menu.Size = new System.Drawing.Size(188, 21);
+            this.cb_box_Menu.TabIndex = 4;
+            this.cb_box_Menu.Click += new System.EventHandler(this.cb_box_Menu_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(548, 218);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Danh Sách Các Món";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cb_box_Menu);
             this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Add);
@@ -175,6 +197,8 @@ namespace Coffe_Management
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.TextBox tb_Find;
         private System.Windows.Forms.Button btn_Refresh;
+        private System.Windows.Forms.ComboBox cb_box_Menu;
+        private System.Windows.Forms.Label label4;
     }
 }
 
